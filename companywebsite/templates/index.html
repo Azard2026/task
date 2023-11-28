@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>chantech</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        
+        
+    </head>
+    
+    <body class="body">
+
+        {% load static %}
+        <p id="span">{{data}}<p>
+        <nav class="navbar">
+            <ul class="logoheader">
+                <h4 class="logo"><b>Chan-Tech</b></h4>
+
+            </ul>
+            
+
+
+            <ul class="link" id="link">
+                <li id="link"><a href="#home">Home</a></li>
+                <li id="link"><a href="#about">About</a></li>
+                <li id="link"><a href="#service">Service</a></li>
+                <li id="link"><a href="#contact">Contact</a></li>
+                <li id="link"><a href="/admin">Admin</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <article id="home">
+                
+                <ul class="
+                content">
+                    <h1 id="text">Better Solutions For Your Business</h1>
+                       <h1 id="text1"> We are team of talented designers making websites with new technology</h1>
+                       <a href="#about"><button id="button" >Getstart</button> </a>
+                </ul>
+                <img  src="{% static "img/a.png" %}" class='contentimg'></img>
+                
+
+            </article>
+            <article class="about" id="about">
+                <ul class="contentabout">
+                <h1 class="aboutcnt">About Chan-Tech</h1>
+                <h3 class="aboutcnt1">We are Software Innovation Company, think beyond the limits, make customer's ideas possible, provide right solutions for customer's business growth and support for the customer's brand success.</h3>
+                <ul id="imgaboutcnt">
+                    <img src="{% static "img/illustration.png" %}" style="width:70px;" id="aboutimgp"></img>
+                    <img src="{% static "img/build.png" %}" style="width:70px;" id="aboutimgp"></img>
+                    <img src="{% static "img/creativity.png" %}" style="width:70px;" id="aboutimgp"></img>
+                    <img src="{% static "img/transformation.png" %}" style="width:70px;" id="aboutimgp"></img>
+
+                </ul>
+                <ul id="imgaboutcnt">
+                    <p>Design</p>
+                    <p>Build</p>
+                    <p>Innovate</p>
+                    <p>Transform</p>
+                    
+                </ul>
+
+
+
+                </ul>
+                <ul  class="contentabout1">
+                    <img src="{% static "img/team1.jpg" %}" style="width:250px;" id="aboutimg"></img>
+                    <img src="{% static "img/team2.jpg" %}" style="width:250px;" id="aboutimg"></img>
+                </ul>
+            </article>
+            <article class="service" id="service">
+                <ul id="service-header">
+                    <h1>SERVICES</h1>
+                    <h5>We provide technical solutions for your ideas and help to build your brand digitally. We travel with you to build, design, develop, enhance, migrate, and provide analytical reports for your brand success.</h5>
+                </ul>
+                <ul id="service-cnt">
+                    <li class="servicecnt">
+                        
+                        <h2>App Modernization</h2>
+                        <p>Develop end-to-end well-integrated, user-friendly, scalable and reliable web application solutions</p>
+
+                    </li>
+                    <li class="servicecnt">
+                        <h2>Digital Transformation</h2>
+                        <p>
+                            Transform your brand digitally by leveraging native and cross-platform technologies.</p>
+                    </li>
+                    <li class="servicecnt">
+                        <h2>Big Data & Analytics</h2>
+                        <p>
+                            Provide Big Data solutions on real-world business problems to ensure your brand growth.</p>
+                    </li>
+                </ul>
+                <ul id="service-cnt">
+                    <li class="servicecnt">
+                        <h2>Product Engineering</h2>
+                        <p>
+                            
+Transform your ideas into reality with best knowledge, expertise and commitment to deliver a comprehensive product.</p>
+                    </li>
+                    <li class="servicecnt">
+                        <h2>Security Engineering</h2>
+                        <p>
+                            
+Identify and provide right solutions on security risks with proven security testing for your applications.</p>
+                    </li>
+                    <li class="servicecnt">
+                        <h2>Cloud & DevOps</h2>
+                        <p>
+                            Offer non-impact cloud solutions and Accelerate Software Delivery process that solve challenging business problems.</p>
+                    </li>
+                </ul>
+            </article>
+            <article class="Contact" id="contact"> 
+                <ul><span id="conttitle">CONTACT</span></ul>
+                <ul class="formcontact">
+                   
+                <form id="form"  action="/" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="username" class="inputs" name="username"  required  minlength="5"/>
+                    <input type="email" placeholder="email" class="inputs" name="email" required/>
+                    <textarea type="text" placeholder="address" class="input" name="address"  required/></textarea>
+                    <input type="number" placeholder="phonenumber" class="inputs" name="number" minlength="10" maxlength="10" required/>
+                    <input type="datetime-local" placeholder="datetime" class="inputs" name="datetime"  required/>
+                    <textarea type="text" placeholder="message" name="message"  required></textarea>
+                    <button type="submit" id="submit" />Submit<button>
+
+                </form>
+            </ul>
+            </article>
+            
+        </main>
+        
+        
+        
+
+        
+        <footer class="footer">
+            
+               <h6>  Copyright @2023 CHAN-TECH CORPORATION</h6>
+                <h6>Privacy PolicyTerms & Conditions</h6>
+           
+        </footer>  
+        <script src="{% static 'js/main.js' %}"></script>
+        
+    </body>
+    
+    
+</html>
